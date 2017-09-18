@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const random = () => Math.floor(Math.random() * 1000);
 export default () => {
-  const number = Math.floor(Math.random() * 1000);
   const actual = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${actual}!`);
   console.log('');
@@ -16,11 +16,11 @@ export default () => {
     const isOddNumberCorrect = curNumber % 2 !== 0 && curAnswer === 'no';
     if (isEvenCorrect || isOddNumberCorrect) {
       console.log('Correct!');
-      iter(Math.floor(Math.random() * 1000), index + 1);
+      iter(random(), index + 1);
     } else {
       console.log('"yes" is wrong answer ;(. Correct answer was "no".');
       console.log(`Let's try again, ${actual}!`);
     }
   };
-  return iter(number, 0);
+  return iter(random(), 0);
 };

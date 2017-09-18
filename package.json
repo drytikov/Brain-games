@@ -1,0 +1,26 @@
+{
+  "name": "project-lvl1-s128",
+  "version": "0.0.1",
+  "description": "brainGames",
+  "main": "/src/bin/brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drytikov/project-lvl1-s128.git"
+  },
+  "author": "RytikovDmitrii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drytikov/project-lvl1-s128/issues"
+  },
+  "homepage": "https://github.com/drytikov/project-lvl1-s128#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  }
+}

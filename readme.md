@@ -1,5 +1,7 @@
-<a href="https://codeclimate.com/github/drytikov/project-lvl1-s128"><img src="https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/gpa.svg" /></a>
-<a href="https://codeclimate.com/github/drytikov/project-lvl1-s128/coverage"><img src="https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/coverage.svg" /></a>
-<a href="https://codeclimate.com/github/drytikov/project-lvl1-s128"><img src="https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/issue_count.svg" /></a>
+[![Code Climate](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/gpa.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128)
+
+[![Test Coverage](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/coverage.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128/coverage)
+
+[![Issue Count](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/issue_count.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128)
 
 [![Build Status](https://travis-ci.org/drytikov/project-lvl1-s128.svg?branch=master)](https://travis-ci.org/drytikov/project-lvl1-s128)

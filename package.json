@@ -1,6 +1,6 @@
 {
   "name": "brain-games-rytikov",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "brainGames",
   "main": "/src/bin/brain-games.js",
   "bin": {
@@ -29,7 +29,6 @@
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*",
-    "readline-sync": "*"
+    "babel-preset-stage-0": "*"
   }
 }

@@ -2,7 +2,7 @@
   "name": "brain-games-rytikov",
   "version": "0.0.4",
   "description": "brainGames",
-  "main": "/src/bin/brain-games.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -11,7 +11,7 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
-    "eslint": "eslint, eslint-config-airbnb-base, eslint-plugin-import, babel-eslint"
+    "eslint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -30,13 +30,13 @@
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*"
+    "babel-preset-stage-0": "*",
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*"
   },
   "dependencies": {
-    "babel-eslint": "^8.0.0",
-    "eslint": "^4.7.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0",
-    "readline-sync": "^1.4.7"
+    "readline-sync": "*"
   }
 }

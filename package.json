@@ -10,7 +10,8 @@
     "prepublish": "npm run build",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel-node": "babel-node"
+    "babel-node": "babel-node",
+    "eslint": "eslint, eslint-config-airbnb-base, eslint-plugin-import, babel-eslint"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,12 @@
     "babel-core": "*",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.7.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "readline-sync": "^1.4.7"
   }
 }

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import actual from 'src'
+import greeting from '../index'
 console.log('Welcome to the Brain Games!');
-actual();
+greeting();

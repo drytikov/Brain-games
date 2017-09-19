@@ -1,8 +1,5 @@
 import { common, random } from '..';
 
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number even otherwise answer "no".');
-console.log('');
 const correctAnswer = (curNumber) => {
   if (curNumber % 2 === 0) {
     return 'yes';
@@ -10,6 +7,9 @@ const correctAnswer = (curNumber) => {
   return 'no';
 };
 export default () => {
+  console.log('Welcome to the Brain Games!');
+  console.log('Answer "yes" if number even otherwise answer "no".');
+  console.log('');
   const numOfGames = 3;
   const iter = (param, index) => {
     if (index === numOfGames) {

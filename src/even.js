@@ -2,12 +2,12 @@ import readlineSync from 'readline-sync';
 
 const random = () => Math.floor(Math.random() * 1000);
 export default () => {
-  const actual = readlineSync.question('May I have your name?: ');
-  console.log(`Hello, ${actual}!`);
+  const name = readlineSync.question('May I have your name?: ');
+  console.log(`Hello, ${name}!`);
   console.log('');
   const iter = (curNumber, index) => {
     if (index === 3) {
-      console.log(`Congratulations, ${actual}!`);
+      console.log(`Congratulations, ${name}!`);
       return;
     }
     console.log(`Question: ${curNumber}`);
@@ -19,7 +19,7 @@ export default () => {
       iter(random(), index + 1);
     } else {
       console.log('\'yes\' is wrong answer ;(. Correct answer was \'no\'.');
-      console.log(`Let's try again, ${actual}!`);
+      console.log(`Let's try again, ${name}!`);
     }
   };
   return iter(random(), 0);

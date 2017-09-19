@@ -8,7 +8,7 @@ export const common = (...param) => {
   if (!param) {
     return;
   }
-  const iter = (params, index) => {
+  const iter = (params) => {
     if (params.length === 0) {
       console.log(`Congratulations, ${name}!`);
       return;
@@ -18,7 +18,7 @@ export const common = (...param) => {
     const curAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer === curAnswer) {
       console.log('Correct!');
-      iter(rest, index + 1);
+      iter(rest);
     } else {
       console.log(`'${curAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);

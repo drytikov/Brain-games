@@ -17,7 +17,7 @@ export default () => {
       return;
     }
     const number = random();
-    const newParam = param.concat(number, correctAnswer(number));
+    const newParam = param.concat([number, correctAnswer(number)]);
     iter(newParam, index + 1);
   };
   return iter([], 0);

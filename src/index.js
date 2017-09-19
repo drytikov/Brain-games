@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const random = () => Math.floor(Math.random() * 10);
+export const random = () => Math.floor(Math.random() * 100);
 export const common = (...param) => {
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);

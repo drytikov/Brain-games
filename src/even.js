@@ -18,7 +18,7 @@ export default () => {
       console.log('Correct!');
       iter(random(), index + 1);
     } else {
-      console.log('"yes" is wrong answer ;(. Correct answer was "no".');
+      console.log('\'yes\' is wrong answer ;(. Correct answer was \'no\'.');
       console.log(`Let's try again, ${actual}!`);
     }
   };

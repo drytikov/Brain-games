@@ -10,14 +10,15 @@ const correctAnswer = (curNumber) => {
   return 'no';
 };
 export default () => {
-  const iter = (param, numOfGames) => {
-    if (numOfGames === 3) {
+  const numOfGames = 3;
+  const iter = (param, index) => {
+    if (index === numOfGames) {
       common(...param);
       return;
     }
     const number = random();
     const newParam = param.concat(number, correctAnswer(number));
-    iter(newParam, numOfGames + 1);
+    iter(newParam, index + 1);
   };
   return iter([], 0);
 };

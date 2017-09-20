@@ -23,7 +23,7 @@ const getOptions = () => {
   const num2 = random();
   const getOper = Math.floor(Math.random() * operColl.length);
   const operation = operColl[getOper];
-  const question = `${num1}${operation}${num2}`;
+  const question = `${num1} ${operation} ${num2}`;
   const correctAnswer = getCorrectAnswer(num1, num2, operation);
   return cons(question, correctAnswer);
 };

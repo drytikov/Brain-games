@@ -1,4 +1,9 @@
-import { common, random } from '..';
+import { cons } from 'hexlet-pairs';
+import common from '..';
+import random from '../utils';
+
+
+const gameAbout = 'Find the greatest common divisor of given numbers.';
 
 const getCorrectAnswer = (num1, num2) => {
   if (num2 === 0) {
@@ -6,13 +11,13 @@ const getCorrectAnswer = (num1, num2) => {
   }
   return getCorrectAnswer(num2, num1 % num2);
 };
-const randQuestion = () => {
+
+const getOptions = () => {
   const num1 = random();
   const num2 = random();
-  return [num1, num2];
+  const question = `${num1} ${num2}`;
+  const correctAnswer = getCorrectAnswer(num1, num2);
+  return cons(question, correctAnswer);
 };
-export default () => {
-  const curInfo = 'Find the greatest common divisor of given numbers.';
-  const numOfGames = 3;
-  return common(curInfo, numOfGames, randQuestion, getCorrectAnswer);
-};
+
+export default () => common(gameAbout, getOptions);

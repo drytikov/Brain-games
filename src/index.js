@@ -1,31 +1,32 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
-export const random = () => Math.floor(Math.random() * 100);
-export const common = (curInfo, numOfGames, question, correctAnswer) => {
+const numOfGames = 3;
+
+export default (gameAbout, getOptions) => {
   console.log('Welcome to the Brain Games!');
-  console.log(curInfo);
+  console.log(gameAbout);
   console.log('');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   console.log('');
-  const firstQuestion = question();
-  const firstCorrectAnswer = correctAnswer(...firstQuestion);
-  const iter = (curQuestion, curCorrectAnswer, index) => {
-    if (index === numOfGames) {
+  const iter = (gameNumber) => {
+    if (gameNumber === numOfGames) {
       console.log(`Congratulations, ${name}!`);
       return;
     }
-    console.log(`Question: ${curQuestion.join(' ')}`);
+    const curOptions = getOptions();
+    const curQuestion = car(curOptions);
+    const curCorrectAnswer = cdr(curOptions);
+    console.log(`Question: ${curQuestion}`);
     const curAnswer = readlineSync.question('Your answer: ');
     if (curCorrectAnswer === curAnswer) {
       console.log('Correct!');
-      const nextQuestion = question();
-      const nextCorrectAnswer = correctAnswer(...nextQuestion);
-      iter(nextQuestion, nextCorrectAnswer, index + 1);
+      iter(gameNumber + 1);
     } else {
       console.log(`'${curAnswer}' is wrong answer ;(. Correct answer was '${curCorrectAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
     }
   };
-  iter(firstQuestion, firstCorrectAnswer, 0);
+  iter(0);
 };

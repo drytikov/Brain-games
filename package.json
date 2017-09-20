@@ -1,6 +1,6 @@
 {
   "name": "brain-games-rytikov",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "brainGames",
   "main": "index.js",
   "bin": {
@@ -40,7 +40,6 @@
     "eslint-plugin-import": "*"
   },
   "dependencies": {
-    "hexlet-pairs": "^1.0.5",
     "hexlet-pairs": "*",
     "readline-sync": "*"
   }

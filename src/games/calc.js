@@ -1,6 +1,11 @@
-import { common, random } from '..';
+import { cons } from 'hexlet-pairs';
+import common from '..';
+import random from '../utils';
 
-const getCorrectAnswer = (num1, operation, num2) => {
+const operColl = ['+', '-', '*'];
+const gameAbout = 'What is the result of the expression?';
+
+const getCorrectAnswer = (num1, num2, operation) => {
   switch (operation) {
     case '+':
       return String(num1 + num2);
@@ -12,16 +17,15 @@ const getCorrectAnswer = (num1, operation, num2) => {
       return console.log('incorrect operation');
   }
 };
-const randQuestion = () => {
+
+const getOptions = () => {
   const num1 = random();
   const num2 = random();
-  const operColl = ['+', '-', '*'];
   const getOper = Math.floor(Math.random() * operColl.length);
   const operation = operColl[getOper];
-  return [num1, operation, num2];
+  const question = `${num1}${operation}${num2}`;
+  const correctAnswer = getCorrectAnswer(num1, num2, operation);
+  return cons(question, correctAnswer);
 };
-export default () => {
-  const curInfo = 'What is the result of the expression?';
-  const numOfGames = 3;
-  return common(curInfo, numOfGames, randQuestion, getCorrectAnswer);
-};
+
+export default () => common(gameAbout, getOptions);

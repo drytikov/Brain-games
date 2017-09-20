@@ -1,6 +1,6 @@
 import { common, random } from '..';
 
-const correctAnswer = (num1, num2, operation) => {
+const correctAnswer = (num1, operation, num2) => {
   switch (operation) {
     case '+':
       return String(num1 + num2);
@@ -12,25 +12,16 @@ const correctAnswer = (num1, num2, operation) => {
       return console.log('incorrect operation');
   }
 };
-
+const randQuestion = () => {
+  const num1 = random();
+  const num2 = random();
+  const operColl = ['+', '-', '*'];
+  const getOper = Math.floor(Math.random() * operColl.length);
+  const operation = operColl[getOper];
+  return [num1, operation, num2];
+};
 export default () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('What is the result of the expression?');
-  console.log('');
+  const curInfo = 'What is the result of the expression?';
   const numOfGames = 3;
-  const iter = (acc, index) => {
-    if (index === numOfGames) {
-      common(...acc);
-      return;
-    }
-    const num1 = random();
-    const num2 = random();
-    const operColl = ['+', '-', '*'];
-    const getOper = Math.floor(Math.random() * operColl.length);
-    const operation = operColl[getOper];
-    const question = `${num1}${operation}${num2}`;
-    const newAcc = acc.concat(question, correctAnswer(num1, num2, operation));
-    iter(newAcc, index + 1);
-  };
-  return iter([], 0);
+  return common(curInfo, numOfGames, randQuestion, correctAnswer);
 };

@@ -1,10 +1,9 @@
 import readlineSync from 'readline-sync';
 
 export const random = () => Math.floor(Math.random() * 100);
-export const info = about => console.log(about);
 export const common = (curInfo, numOfGames, question, correctAnswer) => {
   console.log('Welcome to the Brain Games!');
-  info(curInfo);
+  console.log(curInfo);
   console.log('');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);

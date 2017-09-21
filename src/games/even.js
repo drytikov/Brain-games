@@ -7,7 +7,7 @@ const gameAbout = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = question => question % 2 === 0;
 
 const getCorrectAnswer = question =>
-  isEven(question) ? 'yes' : 'no';
+  (isEven(question) ? 'yes' : 'no');
 
 const getOptions = () => {
   const question = random();

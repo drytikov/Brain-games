@@ -19,8 +19,8 @@ const getCorrectAnswer = (num1, num2, operation) => {
 };
 
 const getOptions = () => {
-  const num1 = random();
-  const num2 = random();
+  const num1 = random(1000);
+  const num2 = random(1000);
   const operation = operColl[random(3)];
   const question = `${num1} ${operation} ${num2}`;
   const correctAnswer = getCorrectAnswer(num1, num2, operation);

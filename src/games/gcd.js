@@ -13,8 +13,8 @@ const getCorrectAnswer = (num1, num2) => {
 };
 
 const getOptions = () => {
-  const num1 = random();
-  const num2 = random();
+  const num1 = random(1000);
+  const num2 = random(1000);
   const question = `${num1} ${num2}`;
   const correctAnswer = getCorrectAnswer(num1, num2);
   return cons(question, correctAnswer);

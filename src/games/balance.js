@@ -19,7 +19,7 @@ const getCorrectAnswer = (num) => {
   const minDigit = Math.min.apply(null, arrDigitsOfNum);
   const maxDigit = Math.max.apply(null, arrDigitsOfNum);
   if ((maxDigit - minDigit) < 2) {
-    return num;
+    return String(num);
   }
   const indexMin = arrDigitsOfNum.indexOf(minDigit);
   const indexMax = arrDigitsOfNum.indexOf(maxDigit);
@@ -27,7 +27,7 @@ const getCorrectAnswer = (num) => {
 };
 
 const getOptions = () => {
-  const num = random(100);
+  const num = random(1000);
   const correctAnswer = getCorrectAnswer(num);
   return cons(num, correctAnswer);
 };

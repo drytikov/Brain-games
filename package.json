@@ -1,6 +1,6 @@
 {
   "name": "brain-games-rytikov",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "brainGames",
   "main": "index.js",
   "bin": {

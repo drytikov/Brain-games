@@ -1,9 +1,9 @@
 import { cons } from 'hexlet-pairs';
-import common from '..';
+import run from '..';
 import random from '../utils';
 
 const operColl = ['+', '-', '*'];
-const gameAbout = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getCorrectAnswer = (num1, num2, operation) => {
   switch (operation) {
@@ -21,11 +21,10 @@ const getCorrectAnswer = (num1, num2, operation) => {
 const getOptions = () => {
   const num1 = random();
   const num2 = random();
-  const getOper = Math.floor(Math.random() * operColl.length);
-  const operation = operColl[getOper];
+  const operation = operColl[random(3)];
   const question = `${num1} ${operation} ${num2}`;
   const correctAnswer = getCorrectAnswer(num1, num2, operation);
   return cons(question, correctAnswer);
 };
 
-export default () => common(gameAbout, getOptions);
+export default () => run(description, getOptions);

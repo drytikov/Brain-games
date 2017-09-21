@@ -10,7 +10,7 @@ const getCorrectAnswer = question =>
   (isEven(question) ? 'yes' : 'no');
 
 const getOptions = () => {
-  const question = random();
+  const question = random(1000);
   const correctAnswer = getCorrectAnswer(question);
   return cons(question, correctAnswer);
 };

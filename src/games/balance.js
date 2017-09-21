@@ -27,7 +27,7 @@ const getCorrectAnswer = (num) => {
 };
 
 const getOptions = () => {
-  const num = random();
+  const num = random(1000);
   const correctAnswer = getCorrectAnswer(num);
   return cons(num, correctAnswer);
 };

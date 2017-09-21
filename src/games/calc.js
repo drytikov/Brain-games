@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import run from '..';
+import runGame from '..';
 import random from '../utils';
 
 const operColl = ['+', '-', '*'];
@@ -21,4 +21,4 @@ const getOptions = () => {
   }
 };
 
-export default () => run(description, getOptions);
+export default () => runGame(description, getOptions);

@@ -1,13 +1,14 @@
 {
   "name": "brain-games-rytikov",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "brainGames",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js"
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-balance": "dist/bin/brain-balance.js"
   },
   "scripts": {
     "prepublish": "npm run build",

@@ -26,10 +26,10 @@ const getCorrectAnswer = (num) => {
   return balance(arrDigitsOfNum, minDigit, indexMin, maxDigit, indexMax);
 };
 
-const getOptions = () => {
+const getInputParams = () => {
   const num = random(1000);
   const correctAnswer = getCorrectAnswer(num);
   return cons(num, correctAnswer);
 };
 
-export default () => runGame(description, getOptions);
+export default () => runGame(description, getInputParams);

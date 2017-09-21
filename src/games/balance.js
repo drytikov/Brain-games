@@ -1,8 +1,8 @@
 import { cons } from 'hexlet-pairs';
-import common from '..';
+import runGame from '..';
 import random from '../utils';
 
-const gameAbout = 'Balance the given number.';
+const description = 'Balance the given number.';
 
 const getCorrectAnswer = (num) => {
   const balance = (arrDigitsOfNum, minDigit, indexMin, maxDigit, indexMax) => {
@@ -32,4 +32,4 @@ const getOptions = () => {
   return cons(num, correctAnswer);
 };
 
-export default () => common(gameAbout, getOptions);
+export default () => runGame(description, getOptions);

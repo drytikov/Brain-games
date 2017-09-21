@@ -5,7 +5,7 @@ import random from '../utils';
 const operColl = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
-const getOptions = () => {
+const getInputParams = () => {
   const num1 = random(10);
   const num2 = random(10);
   const operation = operColl[random(3)];
@@ -21,4 +21,4 @@ const getOptions = () => {
   }
 };
 
-export default () => runGame(description, getOptions);
+export default () => runGame(description, getInputParams);

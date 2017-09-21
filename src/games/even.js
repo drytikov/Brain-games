@@ -9,10 +9,10 @@ const isEven = num => num % 2 === 0;
 const getCorrectAnswer = question =>
   (isEven(question) ? 'yes' : 'no');
 
-const getOptions = () => {
+const getInputParams = () => {
   const question = random(1000);
   const correctAnswer = getCorrectAnswer(question);
   return cons(question, correctAnswer);
 };
 
-export default () => runGame(description, getOptions);
+export default () => runGame(description, getInputParams);

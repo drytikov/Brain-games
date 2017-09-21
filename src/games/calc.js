@@ -5,26 +5,20 @@ import random from '../utils';
 const operColl = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
-const getCorrectAnswer = (num1, num2, operation) => {
+const getOptions = () => {
+  const num1 = random(10);
+  const num2 = random(10);
+  const operation = operColl[random(3)];
   switch (operation) {
     case '+':
-      return String(num1 + num2);
+      return cons(`${num1} + ${num2}`, String(num1 + num2));
     case '-':
-      return String(num1 - num2);
+      return cons(`${num1} - ${num2}`, String(num1 - num2));
     case '*':
-      return String(num1 * num2);
+      return cons(`${num1} * ${num2}`, String(num1 * num2));
     default:
       return console.log('incorrect operation');
   }
-};
-
-const getOptions = () => {
-  const num1 = random(1000);
-  const num2 = random(1000);
-  const operation = operColl[random(3)];
-  const question = `${num1} ${operation} ${num2}`;
-  const correctAnswer = getCorrectAnswer(num1, num2, operation);
-  return cons(question, correctAnswer);
 };
 
 export default () => run(description, getOptions);

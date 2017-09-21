@@ -8,8 +8,8 @@ const getCorrectAnswer = (num) => {
   const balance = (arrDigitsOfNum, minDigit, indexMin, maxDigit, indexMax) => {
     const curArrDigitsOfNum = arrDigitsOfNum;
     if ((maxDigit - minDigit) < 2) {
-      curArrDigitsOfNum[indexMax] = maxDigit - 1;
-      curArrDigitsOfNum[indexMin] = minDigit + 1;
+      curArrDigitsOfNum[indexMax] = maxDigit;
+      curArrDigitsOfNum[indexMin] = minDigit;
       return getCorrectAnswer(curArrDigitsOfNum.sort((a, b) => a - b).join(''));
     }
     return balance(arrDigitsOfNum, minDigit + 1, indexMin, maxDigit - 1, indexMax);

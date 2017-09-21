@@ -30,6 +30,16 @@
     "url": "https://github.com/drytikov/project-lvl1-s128/issues"
   },
   "homepage": "https://github.com/drytikov/project-lvl1-s128#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*"
+  },
   "dependencies": {
     "hexlet-pairs": "1.0.5",
     "readline-sync": "*"

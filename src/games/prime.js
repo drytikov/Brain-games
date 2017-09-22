@@ -8,14 +8,14 @@ const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
-  const iter = (index) => {
-    if (index > num / 2) {
+  const iter = (div) => {
+    if (div > num / 2) {
       return true;
     }
-    if (num % index === 0) {
+    if (num % div === 0) {
       return false;
     }
-    return iter(index + 1);
+    return iter(div + 1);
   };
   return iter(2);
 };

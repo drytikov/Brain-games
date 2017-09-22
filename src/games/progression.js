@@ -7,12 +7,11 @@ const description = 'What number is missing in this progression?';
 const progressionLength = 10;
 const step = random(10);
 
-const getProgression = (progression, numOfItem) => {
+const getProgression = (acc, numOfItem) => {
   if (numOfItem === progressionLength) {
-    return progression;
+    return acc;
   }
-  const newProgression = progression.concat(progression[numOfItem - 1] + step);
-  return getProgression(newProgression, numOfItem + 1);
+  return getProgression([...acc, acc[numOfItem - 1] + step], numOfItem + 1);
 };
 
 const getInputParams = () => {

@@ -12,7 +12,7 @@ console.log('');
 const name = readlineSync.question('May I have your name?: ');
 console.log(colors.cyan(`Hello, ${name}!`));
 console.log('');
-const choose = () => {
+const chooseGame = () => {
   console.log('');
   console.log('1. Brain Even');
   console.log('2. Brain Calc');
@@ -21,10 +21,10 @@ const choose = () => {
   console.log('5. Brain Prime');
   console.log('6. Brain Progression');
   console.log('');
-  const game =
+  const numOfGame =
     readlineSync.question('Type the number of the game that you want to play: ');
   console.log('');
-  switch (game) {
+  switch (numOfGame) {
     case '1':
       return even(name);
     case '2':
@@ -39,7 +39,7 @@ const choose = () => {
       return progression(name);
     default:
       console.log(colors.red('Game with this number does not exist!'));
-      return choose();
+      return chooseGame();
   }
 };
-export default choose;
+export default chooseGame;

@@ -3,7 +3,7 @@ import runGame from '..';
 import random from '../utils';
 
 
- const description = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const nod = (num1, num2) => {
   if (num2 === 0) {

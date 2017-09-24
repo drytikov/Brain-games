@@ -29,4 +29,4 @@ const getInputParams = () => {
   return cons(question, correctAnswer);
 };
 
-export default name => runGame(name, description, getInputParams);
+export default userName => runGame(userName, description, getInputParams);

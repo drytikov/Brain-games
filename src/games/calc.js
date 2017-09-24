@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import runGame from '..';
 import random from '../utils';
 
- const operColl = ['+', '-', '*'];
+const operColl = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getInputParams = () => {

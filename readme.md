@@ -1,8 +1,3 @@
-<p>[![Code Climate](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/gpa.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128)
-
-[![Test Coverage](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/coverage.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128/coverage)
-
-[![Issue Count](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/issue_count.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128)
-
-[![Build Status](https://travis-ci.org/drytikov/Brain-games.svg?branch=master)](https://travis-ci.org/drytikov/Brain-games)
-</p>
+<p><a href="https://codeclimate.com/github/drytikov/Brain-games"><img src="https://codeclimate.com/github/drytikov/Brain-games/badges/gpa.svg" /></a>
+<a href="https://codeclimate.com/github/drytikov/Brain-games"><img src="https://codeclimate.com/github/drytikov/Brain-games/badges/issue_count.svg" /></a>
+<a href="https://travis-ci.org/drytikov/Brain-games"><img src="https://travis-ci.org/drytikov/Brain-games.svg?branch=master"></a></p>

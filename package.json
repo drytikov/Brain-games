@@ -1,6 +1,6 @@
 {
   "name": "brain-games-dimon",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/drytikov/project-lvl1-s128#readme",
   "dependencies": {
+    "colors": "^1.1.2",
     "hexlet-pairs": "*",
     "readline-sync": "*"
   },

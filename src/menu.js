@@ -7,7 +7,7 @@ import gcd from './games/gcd';
 import prime from './games/prime';
 import progression from './games/progression';
 
-console.log(colors.blue('Welcome to the Brain Games!'));
+ console.log(colors.blue('Welcome to the Brain Games!'));
 console.log('');
 const userName = readlineSync.question('May I have your name?: ');
 console.log(colors.cyan(`Hello, ${userName}!`));

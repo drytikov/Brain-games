@@ -1,18 +1,17 @@
 import readlineSync from 'readline-sync';
+import colors from 'colors';
 import { car, cdr } from 'hexlet-pairs';
+import chooseGame from './menu';
+
 
 const numOfGames = 3;
 
-export default (description, getInputParams) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(description);
-  console.log('');
-  const name = readlineSync.question('May I have your name?: ');
-  console.log(`Hello, ${name}!`);
+export default (name, description, getInputParams) => {
+  console.log(colors.green(description));
   console.log('');
   const iter = (gameNumber) => {
     if (gameNumber === numOfGames) {
-      console.log(`Congratulations, ${name}!`);
+      console.log(colors.rainbow(`Congratulations, ${name}!`));
       return;
     }
     const inputParams = getInputParams();
@@ -21,12 +20,26 @@ export default (description, getInputParams) => {
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (correctAnswer === answer) {
-      console.log('Correct!');
+      console.log(colors.yellow('Correct!'));
       iter(gameNumber + 1);
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}!`);
+      console.log(colors.red(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`));
+      console.log(colors.cyan(`Let's try again, ${name}!`));
     }
   };
   iter(0);
+  console.log('');
+  const playAnotherGame = () => {
+    const abc =
+      readlineSync.question(colors.green('Do you want to play another game? (y/n): '));
+    switch (abc) {
+      case 'y':
+        return chooseGame();
+      case 'n':
+        return console.log(colors.cyan(`Goodbye, ${name}!`));
+      default:
+        return playAnotherGame();
+    }
+  };
+  playAnotherGame();
 };

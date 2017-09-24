@@ -21,4 +21,4 @@ const getInputParams = () => {
   }
 };
 
-export default name => runGame(name, description, getInputParams);
+export default userName => runGame(userName, description, getInputParams);

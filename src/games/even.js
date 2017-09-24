@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import runGame from '..';
 import random from '../utils';
 
-const description = 'Answer "yes" if number even otherwise answer "no".';
+ const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = num => num % 2 === 0;
 

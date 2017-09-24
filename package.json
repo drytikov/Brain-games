@@ -1,6 +1,6 @@
 {
   "name": "brain-games-dimon",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -27,5 +27,15 @@
     "colors": "^1.1.2",
     "hexlet-pairs": "*",
     "readline-sync": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*"
   }
 }

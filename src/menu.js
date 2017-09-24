@@ -12,34 +12,14 @@ console.log('');
 const name = readlineSync.question('May I have your name?: ');
 console.log(colors.cyan(`Hello, ${name}!`));
 console.log('');
-const chooseGame = () => {
-  console.log('');
-  console.log('1. Brain Even');
-  console.log('2. Brain Calc');
-  console.log('3. Brain Balance');
-  console.log('4. Brain GCD');
-  console.log('5. Brain Prime');
-  console.log('6. Brain Progression');
-  console.log('');
-  const numOfGame =
-    readlineSync.question('Type the number of the game that you want to play: ');
-  console.log('');
-  switch (numOfGame) {
-    case '1':
-      return even(name);
-    case '2':
-      return calc(name);
-    case '3':
-      return balance(name);
-    case '4':
-      return gcd(name);
-    case '5':
-      return prime(name);
-    case '6':
-      return progression(name);
-    default:
-      console.log(colors.red('Game with this number does not exist!'));
-      return chooseGame();
+export default () => {
+  const games = [even, calc, balance, gcd, prime, progression];
+  const descriptions = ['Is even?', 'Calculator', 'Balance', 'GCD', 'Is prime', 'Fill the progression'];
+  const choosenIndex = readlineSync.keyInSelect(descriptions, 'Choose the game');
+  if (choosenIndex < 0) {
+    console.log(colors.cyan(`Goodbye, ${name}!`));
+  } else {
+    const gameName = games[choosenIndex];
+    gameName(name);
   }
 };
-export default chooseGame;

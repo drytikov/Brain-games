@@ -29,17 +29,9 @@ export default (name, description, getInputParams) => {
   };
   iter(0);
   console.log('');
-  const playAnotherGame = () => {
-    const abc =
-      readlineSync.question(colors.green('Do you want to play another game? (y/n): '));
-    switch (abc) {
-      case 'y':
-        return chooseGame();
-      case 'n':
-        return console.log(colors.cyan(`Goodbye, ${name}!`));
-      default:
-        return playAnotherGame();
-    }
-  };
-  playAnotherGame();
+  if (readlineSync.keyInYN('Do you want to play another game?')) {
+    chooseGame();
+  } else {
+    console.log(colors.cyan(`Goodbye, ${name}!`));
+  }
 };

@@ -4,4 +4,4 @@
 
 [![Issue Count](https://codeclimate.com/github/drytikov/project-lvl1-s128/badges/issue_count.svg)](https://codeclimate.com/github/drytikov/project-lvl1-s128)
 
-[![Build Status](https://travis-ci.org/drytikov/project-lvl1-s128.svg?branch=master)](https://travis-ci.org/drytikov/project-lvl1-s128)
+[![Build Status](https://travis-ci.org/drytikov/Brain-games.svg?branch=master)](https://travis-ci.org/drytikov/Brain-games)

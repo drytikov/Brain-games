@@ -4,7 +4,7 @@ import { car, cdr } from 'hexlet-pairs';
 import chooseGame from './menu';
 
 
-const numOfGames = 3;
+ const numOfGames = 3;
 
 export default (userName, description, getInputParams) => {
   console.log('');

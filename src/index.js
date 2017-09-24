@@ -6,12 +6,13 @@ import chooseGame from './menu';
 
 const numOfGames = 3;
 
-export default (name, description, getInputParams) => {
+export default (userName, description, getInputParams) => {
+  console.log('');
   console.log(colors.green(description));
   console.log('');
   const iter = (gameNumber) => {
     if (gameNumber === numOfGames) {
-      console.log(colors.rainbow(`Congratulations, ${name}!`));
+      console.log(colors.rainbow(`Congratulations, ${userName}!`));
       return;
     }
     const inputParams = getInputParams();
@@ -24,7 +25,7 @@ export default (name, description, getInputParams) => {
       iter(gameNumber + 1);
     } else {
       console.log(colors.red(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`));
-      console.log(colors.cyan(`Let's try again, ${name}!`));
+      console.log(colors.cyan(`Let's try again, ${userName}!`));
     }
   };
   iter(0);
@@ -32,6 +33,6 @@ export default (name, description, getInputParams) => {
   if (readlineSync.keyInYN('Do you want to play another game?')) {
     chooseGame();
   } else {
-    console.log(colors.cyan(`Goodbye, ${name}!`));
+    console.log(colors.cyan(`Goodbye, ${userName}!`));
   }
 };

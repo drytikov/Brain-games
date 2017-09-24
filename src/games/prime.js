@@ -4,7 +4,7 @@ import random from '../utils';
 
 const description = 'Answer "yes" if number prime otherwise answer "no".';
 
- const isPrime = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return false;
   }

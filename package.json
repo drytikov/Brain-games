@@ -1,6 +1,6 @@
 {
   "name": "brain-games-dimon",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -25,7 +25,6 @@
   "homepage": "https://github.com/drytikov/Brain-games#readme",
   "dependencies": {
     "colors": "^1.1.2",
-    "hexlet-pairs": "*",
     "readline-sync": "*"
   },
   "devDependencies": {

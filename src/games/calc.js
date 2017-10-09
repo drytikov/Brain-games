@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import runGame from '..';
 import random from '../utils';
 
@@ -11,11 +10,20 @@ const getInputParams = () => {
   const operation = operColl[random(3)];
   switch (operation) {
     case '+':
-      return cons(`${num1} + ${num2}`, String(num1 + num2));
+      return {
+        question: `${num1} + ${num2}`,
+        correctAnswer: String(num1 + num2),
+      };
     case '-':
-      return cons(`${num1} - ${num2}`, String(num1 - num2));
+      return {
+        question: `${num1} - ${num2}`,
+        correctAnswer: String(num1 - num2),
+      };
     case '*':
-      return cons(`${num1} * ${num2}`, String(num1 * num2));
+      return {
+        question: `${num1} * ${num2}`,
+        correctAnswer: String(num1 * num2),
+      };
     default:
       return console.log('incorrect operation');
   }

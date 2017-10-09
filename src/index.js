@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 import colors from 'colors';
-import { car, cdr } from 'hexlet-pairs';
 import chooseGame from './menu';
 
 
@@ -16,8 +15,7 @@ export default (userName, description, getInputParams) => {
       return;
     }
     const inputParams = getInputParams();
-    const question = car(inputParams);
-    const correctAnswer = cdr(inputParams);
+    const { question, correctAnswer } = inputParams;
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (correctAnswer === answer) {

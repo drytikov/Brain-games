@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import runGame from '..';
 import random from '../utils';
 
@@ -26,7 +25,10 @@ const getCorrectAnswer = question =>
 const getInputParams = () => {
   const question = random(100);
   const correctAnswer = getCorrectAnswer(question);
-  return cons(question, correctAnswer);
+  return {
+    question,
+    correctAnswer,
+  };
 };
 
 export default userName => runGame(userName, description, getInputParams);

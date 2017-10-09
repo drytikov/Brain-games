@@ -1,4 +1,3 @@
-import { cons } from 'hexlet-pairs';
 import runGame from '..';
 import random from '../utils';
 
@@ -24,6 +23,9 @@ const getInputParams = () => {
   const correctAnswer = String(progression[numOfRandomItem]);
   progression[numOfRandomItem] = '...';
   const question = progression.join(' ');
-  return cons(question, correctAnswer);
+  return {
+    question,
+    correctAnswer,
+  };
 };
 export default userName => runGame(userName, description, getInputParams);

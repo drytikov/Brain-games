@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drytikov/Brain-games.git"
+    "url": "git+https://github.com/drytikov/brain-games.git"
   },
   "author": "drytikov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/drytikov/Brain-games/issues"
+    "url": "https://github.com/drytikov/brain-games/issues"
   },
-  "homepage": "https://github.com/drytikov/Brain-games#readme",
+  "homepage": "https://github.com/drytikov/brain-games#readme",
   "dependencies": {
     "colors": "^1.1.2",
     "readline-sync": "*"
